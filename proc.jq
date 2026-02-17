@@ -1,4 +1,4 @@
-(.price > 50000) as $is_over
+((.price | round) >= 50000) as $is_over
 | @html "<!DOCTYPE html>
 
 <meta charset=\"utf-8\">
