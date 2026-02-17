@@ -4,6 +4,10 @@
 <meta charset=\"utf-8\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 <link rel=\"stylesheet\" href=\"style.css\">
+<meta property=\"og:url\" content=\"https://isthedowover50000.now/\">
+<meta property=\"og:type\" content=\"website\">
+<meta property=\"og:title\" content=\"The Dow is \(if $is_over then "over" else "under" end) 50,000\">
+<meta property=\"og:description\" content=\"The Dow Jones Industrial Average was at \(.price | round) at \(.updated | strftime("%Y-%m-%d %H:%M:%S UTC"))\">
 <title>The Dow is \(if $is_over then "over" else "under" end) 50,000</title>
 
 <div class=\"container \(if $is_over then "result-is-over" else "result-is-under" end)\">
