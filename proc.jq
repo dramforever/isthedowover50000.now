@@ -20,7 +20,7 @@
   </div>
   <div class=\"footer\">
     <div>Latest quote: \(.price | round)</div>
-    <div>Last updated: <time id=\"last-updated\" datetime=\"\(.updated | todateiso8601)\">\(.updated | strftime("%Y-%m-%d %H:%M:%S UTC"))</time></div>
+    <div>Last updated: <time id=\"last-updated\" datetime=\"\(.updated | todateiso8601)\">\(.updated | strflocaltime("%Y-%m-%d %H:%M")) \(env.TZ)</time></div>
   </div>
 </div>
 "
