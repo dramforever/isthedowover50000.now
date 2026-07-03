@@ -9,4 +9,4 @@ curl --fail-with-body --user-agent "$user_agent" -H "X-Api-Key: ${API_NINJAS_TOK
 cat data.json >&2
 jq -r -f proc.jq < data.json > site/index.html
 cat site/index.html >&2
-tar cv -C site . | curl $server"" -v -X PUT -H "Host: $domain" -H "Authorization: Pages $GIT_PAGES_CLI_TOKEN" -H "Content-Type: application/x-tar" --data-binary @-
+tar cv -C site . | curl $server"" -X PUT -H "Host: $domain" -H "Authorization: Pages $GIT_PAGES_CLI_TOKEN" -H "Content-Type: application/x-tar" --data-binary @-
